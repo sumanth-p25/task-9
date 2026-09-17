@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Pushes container image to Docker Hub securely using saved credentials
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials-id') {
+                    docker.withRegistry('https://registry.hub.docker.com', '71fed352-af19-4633-83d1-07c0afbfa360') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
